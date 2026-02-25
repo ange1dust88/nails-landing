@@ -5,14 +5,7 @@ import { useState, useEffect } from "react";
 const NAV_ITEMS = ["Services", "Portfolio", "Reviews", "FAQ", "Contact"];
 
 function Header() {
-  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 150);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   useEffect(() => {
     const onResize = () => setMenuOpen(false);
@@ -40,7 +33,7 @@ function Header() {
   return (
     <>
       <header className="fixed top-0 w-full z-40 transition-all duration-400 h-16 bg-[#f8eee8] flex justify-center border-b border-[#e9d1d4]">
-        <div className="mx-auto w-full max-w-4xl lg:px-0 px-2 py-1 flex items-center justify-between relative">
+        <div className="mx-auto w-full max-w-4xl lg:px-0 px-4 py-1 flex items-center justify-between relative">
           <button
             onClick={() => handleScroll("hero")}
             className="flex flex-col leading-tight cursor-pointer"
@@ -95,28 +88,28 @@ function Header() {
       </header>
       <button
         onClick={() => setMenuOpen(!menuOpen)}
-        className="fixed top-4 right-4 w-10 h-10 flex items-center justify-center z-50 lg:hidden cursor-pointer"
+        className="fixed top-4 right-4 w-10 h-10 flex items-center justify-center z-50 lg:hidden cursor-pointer duration-300 transition-colors bg-[#f0dfde] hover:bg-[#ebd9d5] rounded-[50%]"
         aria-label="Toggle menu"
       >
         <span
-          className={`absolute w-6 h-0.5 transition-all duration-300 ${
+          className={`absolute w-5 h-0.5 transition-all duration-300 ${
             menuOpen ? "rotate-45" : "-translate-y-2"
           } ${burgerColor}`}
         />
         <span
-          className={`absolute w-6 h-0.5 transition-opacity duration-200 ${
+          className={`absolute w-5 h-0.5 transition-opacity duration-200 ${
             menuOpen ? "opacity-0" : "opacity-100"
           } ${burgerColor}`}
         />
         <span
-          className={`absolute w-6 h-0.5 transition-all duration-300 ${
+          className={`absolute w-5 h-0.5 transition-all duration-300 ${
             menuOpen ? "-rotate-45" : "translate-y-2"
           } ${burgerColor}`}
         />
       </button>
 
       <aside
-        className={`fixed top-0 right-0 h-screen w-72 bg-white z-40
+        className={`fixed top-0 right-0 h-screen w-full bg-white z-40
           transform transition-transform duration-400
           ${menuOpen ? "translate-y-0" : "-translate-y-full"}`}
       >

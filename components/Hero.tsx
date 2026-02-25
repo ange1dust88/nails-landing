@@ -3,15 +3,15 @@ import React from "react";
 function Hero() {
   return (
     <section className="bg-[#f8eee8] h-screen ">
-      <div className="max-w-4xl mx-auto bg-red-50 h-full lg:px-0 px-2 pt-16">
-        <div className="flex justify-between items-center mt-12">
-          <h1 className="text-[#240115] text-6xl">
+      <div className="max-w-4xl mx-auto bg-red-50 min-h-full flex flex-col lg:px-0 px-4 pt-12 pb-4">
+        <div className="flex flex-col lg:flex-row justify-between items-start gap-4 lg:gap-0 lg:items-center mt-12 ">
+          <h1 className="text-[#240115] lg:text-6xl text-5xl">
             Ready for nails
             <br /> that feel{" "}
             <span className="italic text-[#8c2155]">like you?</span>
           </h1>
 
-          <div className="flex flex-col gap-2 items-start max-w-70">
+          <div className="flex flex-col gap-4 items-start max-w-70">
             <p className="">
               Custom nail designs that reflect your mood, style, and everyday
               energy.
@@ -50,21 +50,21 @@ function Hero() {
           </div>
         </div>
 
-        <div className="grid grid-cols-3 gap-4 mt-16">
+        <div className="grid grid-cols-3 gap-4 mt-16 flex-1">
           <img
             src="/hero1.avif"
             alt=""
-            className="w-full h-96 object-cover rounded-t-[9rem] rounded-b-2xl"
+            className="w-full h-full object-cover rounded-t-[9rem] rounded-b-2xl"
           />
           <img
             src="/hero2.avif"
             alt=""
-            className="w-full h-96 object-cover rounded-t-[9rem] rounded-b-[9rem]"
+            className="w-full h-full object-cover rounded-t-[9rem] rounded-b-[9rem]"
           />
           <img
             src="/hero3.avif"
             alt=""
-            className="w-full h-96 object-cover rounded-t-[9rem] rounded-b-2xl"
+            className="w-full h-full object-cover rounded-t-[9rem] rounded-b-2xl"
           />
         </div>
       </div>

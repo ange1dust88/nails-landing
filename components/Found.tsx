@@ -1,15 +1,13 @@
-import React from "react";
-
 function Found() {
   return (
-    <section className="bg-[#f8eee8] h-screen ">
+    <section className="bg-[#f8eee8]">
       <div className="max-w-4xl mx-auto h-full flex flex-col lg:px-0 px-4 pt-32 pb-4">
         <h2 className=" text-5xl text-[#240115] text-center">
           The foundation <br />{" "}
           <span className="text-[#8c2155] italic">of great nails</span>
         </h2>
 
-        <div className="grid grid-cols-3 gap-4 mt-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-4 mt-12">
           <a
             href="/"
             className="group relative flex flex-col items-center justify-between rounded-2xl border border-[#e4cbcf] bg-[#f5e9e4] p-6 h-72 transition-colors duration-300 hover:bg-[#f0e2df] cursor-pointer"
@@ -101,6 +99,11 @@ function Found() {
             <div className="bg-[#ecd9da] absolute h-2 w-8/10 top-full rounded-b-2xl"></div>
           </a>
         </div>
+
+        <p className="text-center text-lg text-[#240115] m-auto max-w-xl py-16 text-balance">
+          Our most-loved treatments, crafted to refresh, relax, and leave you
+          polished to perfection.
+        </p>
       </div>
     </section>
   );
